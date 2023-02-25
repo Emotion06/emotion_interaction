@@ -18,32 +18,32 @@ Config.MetaData = true
 
 Config.Cigpack = {
 
-    Broken = "Schachtel ist leer!", 
-    Durability = "Stück = ",
+    Broken = "Box is empty!", 
+    Durability = "Piece = ",
     Max = 10,
     Lost = 1, 
 }
 
 Config.Cigarpack = {
 
-    Broken = "Schachtel ist leer!",
-    Durability = "Stück = ",
+    Broken = "Box is empty!",
+    Durability = "Piece = ",
     Max = 6, 
     Lost = 1,
 }
 
 Config.Pipepack = {
 
-    Broken = "Dose ist leer!",
-    Durability = "Stück = ",
+    Broken = "Can is empty!",
+    Durability = "Piece = ",
     Max = 6, 
     Lost = 1,
 }
 
 Config.Chewingtobaccopack = {
 
-    Broken = "Dose ist leer!",
-    Durability = "Stück = ",
+    Broken = "Can is empty!",
+    Durability = "Piece = ",
     Max = 10, 
     Lost = 1,
 }
@@ -88,33 +88,33 @@ Config.Smokes = {
 Config.Language = {
 
     -- Cigpack
-    [1] = {text = "Fertig rauchen",},
-    [2] = {text = "Ziehen",},
-    [3] = {text = "Haltung ändern",},
+    [1] = {text = "Finish smoking",},
+    [2] = {text = "Inhale",},
+    [3] = {text = "Change Stance",},
 
     -- Cigarpack   
-    [4] = {text = "Fertig rauchen",}, 
+    [4] = {text = "Finish smoking",}, 
 
     -- Pipepack
-    [5] = {text = "Wegstecken",},
-    [6] = {text = "Ziehen",},
-    [7] = {text = "Haltung ändern",},
+    [5] = {text = "Put away",},
+    [6] = {text = "Inhale",},
+    [7] = {text = "Change Stance",},
 
     -- Chewingtobaccopack
     [8] = {text = "Ausspucken"}, 
-    [9] = {text = "Kauen",}, 
-    [10] = {text = "Haltung ändern",},
+    [9] = {text = "Chew",}, 
+    [10] = {text = "Change Stance",},
 
     -- Fan
-    [11] = {text = "Wegstecken",},
-    [12] = {text = "Wedeln",},
+    [11] = {text = "Put away",},
+    [12] = {text = "Wagging",},
 
     -- Pipe
-    [13] = {text = "Du brauchst eine Pfeife!",},  -- server.lua
+    [13] = {text = "You need a pipe!",},  -- server.lua
 
     -- Parasol
-    [14] = {text = "Du benutzt einen Schirm!",}, -- server.lua
-    [15] = {text = "Du kannst es jetzt nicht benutzen!",}
+    [14] = {text = "You use a parasol!",}, -- server.lua
+    [15] = {text = "You can't use it now!",}
 }
 
 -------------------------------------------------------------------------
@@ -122,9 +122,9 @@ Config.Language = {
 ------------------------------------------------------------------------- 
 
 Config.Prompts = {
-    Title = "Schirm",
+    Title = "Prasol",
     StopPrompt = 0x5966D52A,
-    StopName = "Wegpacken",
+    StopName = "Put away",
 }
 
 Config.Parasol = {
