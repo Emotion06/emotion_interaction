@@ -9,7 +9,9 @@
 - Pipe with Tobacco
 - Chewing Tobacco
 - Fan 
-- Parasol 
+- Parasol
+- Pocket Watch
+- Hairpomade 
 
 ## HOW IT WORKS
 In the Config.lua you can activate the metadata or you use the items from SubItem.
