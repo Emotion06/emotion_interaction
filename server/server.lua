@@ -16,7 +16,7 @@ Citizen.CreateThread(function()
 			if v.pipe then 
 				local count = VorpInv.getItemCount(data.source, Config.Pipeitem)
 				if 0 > count then
-					TriggerClientEvent("vorp:TipRight", data.source, ""..Config.Language[13].text.."", 3000)
+					VorpCore.NotifyLeft(data.source,""..Config.Language[11].text.."", ""..Config.Language[12].text.."", "INVENTORY_ITEMS", "kit_tobacco_pipe", 4000, "COLOR_PURE_WHITE")
 					return 
 				end 
 			end
@@ -63,7 +63,7 @@ end)
 					if 0 >= durability then 
 						local random = math.random(1,2)
 						if random == 1 then 
-							TriggerClientEvent("vorp:TipRight", _source, Config.Interactions["cigpack"].Broken, 2000)
+							VorpCore.NotifyLeft(_source, ""..Config.Notification[1].text.."", ""..Config.Notification[2].text.."", "INVENTORY_ITEMS", "consumable_cigarette_box", 4000, "COLOR_PURE_WHITE")
 						else
 							VorpInv.addItem(_source, "cigpack", 1,{description = Config.Interactions["cigpack"].Durability.."1",durability = 1})
 						end
@@ -105,7 +105,7 @@ end)
 					if 0 >= durability then 
 						local random = math.random(1,2)
 						if random == 1 then 
-							TriggerClientEvent("vorp:TipRight", _source, Config.Interactions["cigarpack"].Broken, 2000)
+							VorpCore.NotifyLeft(_source, ""..Config.Notification[3].text.."", ""..Config.Notification[4].text.."", "INVENTORY_ITEMS", "consumable_cigar", 4000, "COLOR_PURE_WHITE")
 						else
 							VorpInv.addItem(_source, "cigarpack", 1,{description = Config.Interactions["cigarpack"].Durability.."1",durability = 1})
 						end
@@ -147,7 +147,7 @@ end)
 					if 0 >= durability then 
 						local random = math.random(1,2)
 						if random == 1 then 
-							TriggerClientEvent("vorp:TipRight", _source, Config.Interactions["pipepack"].Broken, 2000)
+							VorpCore.NotifyLeft(_source, ""..Config.Notification[5].text.."", ""..Config.Notification[6].text.."", "INVENTORY_ITEMS", "kit_tobacco_pipe", 4000, "COLOR_PURE_WHITE")
 						else
 							VorpInv.addItem(_source, "pipepack", 1,{description = Config.Interactions["pipepack"].Durability.."1",durability = 1})
 						end
@@ -189,7 +189,7 @@ end)
 					if 0 >= durability then 
 						local random = math.random(1,2)
 						if random == 1 then 
-							TriggerClientEvent("vorp:TipRight", _source, Config.Interactions["chewingtobaccopack"].Broken, 2000)
+							VorpCore.NotifyLeft(_source, ""..Config.Notification[7].text.."", ""..Config.Notification[8].text.."", "INVENTORY_ITEMS", "consumable_chewing_tobacco", 4000, "COLOR_PURE_WHITE")
 						else
 							VorpInv.addItem(_source, "chewingtobaccopack", 1,{description = Config.Interactions["chewingtobaccopack"].Durability.."1",durability = 1})
 						end
@@ -227,7 +227,7 @@ end)
 					if 0 >= durability then 
 						local random = math.random(1,2)
 						if random == 1 then 
-							TriggerClientEvent("vorp:TipRight", _source, Config.Interactions["hairpomade"].Broken, 2000)
+							VorpCore.NotifyLeft(_source, ""..Config.Notification[9].text.."", ""..Config.Notification[10].text.."", "INVENTORY_ITEMS", "consumable_hair_grease", 4000, "COLOR_PURE_WHITE")
 						else
 							VorpInv.addItem(_source, "hairpomade", 1,{description = Config.Interactions["hairpomade"].Durability.."1",durability = 1})
 						end
@@ -268,8 +268,7 @@ local data = {}
         Wait(500)
 		
         VorpInv.RegisterUsableItem("parasol", function(data)
-        
-            TriggerClientEvent("vorp:TipRight", data.source, ""..Config.Language[14].text.."", 5000)
+			VorpCore.NotifyLeft(data.source,""..Config.Notification[13].text.."", ""..Config.Notification[14].text.."", "INVENTORY_ITEMS", "consumable_herb_parasol_mushroom", 4000, "COLOR_PURE_WHITE")
             TriggerClientEvent('emotion_interaction:parasol',data.source)
         end)
     end)   
