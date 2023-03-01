@@ -253,7 +253,7 @@ function PocketWatch1Prompt(text, button, hold)
     Citizen.CreateThread(function()
         proppromptdisplayed=false
         PropPrompt=nil
-        local str = ""..Config.Language[18].text..""
+        local str = ""..Config.Language[14].text..""
         local buttonhash = button or 0x3B24C470
         local holdbutton = hold or false
         PropPrompt = PromptRegisterBegin()
@@ -1184,7 +1184,7 @@ end)
 RegisterNetEvent('prop:watch')
 AddEventHandler('prop:watch', function() 
     RequestAnimDict('mech_inventory@item@pocketwatch@unarmed@base')
-	PocketWatch1Prompt(""..Config.Language[18].text.."", 0x3B24C470, false)
+	PocketWatch1Prompt(""..Config.Language[14].text.."", 0x3B24C470, false)
     while (not HasAnimDictLoaded('mech_inventory@item@pocketwatch@unarmed@base')) do
 		Citizen.Wait(300)
     end
@@ -1293,9 +1293,9 @@ function EndParasol()
 end
 
 function SetupParasolPrompt()
-        local str2 = ""..Config.Language[17].text..""
+        local str2 = ""..Config.Language[13].text..""
         EndPrompt = PromptRegisterBegin()
-        PromptSetControlAction(EndPrompt, 0x5966D52A) 
+        PromptSetControlAction(EndPrompt, 0x3B24C470) 
         str2 = CreateVarString(10, 'LITERAL_STRING', str2)
         PromptSetText(EndPrompt, str2)
         PromptSetEnabled(EndPrompt, 1)
@@ -1311,7 +1311,7 @@ Citizen.CreateThread(function() --
 	while true do
 		local t = 5
 		if parasolout == true then
-            local label  = CreateVarString(10, 'LITERAL_STRING', ""..Config.Language[16].text.."")
+            local label  = CreateVarString(10, 'LITERAL_STRING', ""..Config.Notification[13].text.."")
             PromptSetActiveGroupThisFrame(ParasolGroup, label)
             DisableControlAction(0, 0x8FFC75D6, 1)
             DisableControlAction(0, 0xD9D0E1C0, 1)
@@ -1337,7 +1337,7 @@ AddEventHandler('emotion_interaction:parasol', function()
         parasolout = true
         CreateParasol()
     else
-        TriggerEvent('vorp:TipRight', ""..Config.Language[15].text.."", 4000)
+        VorpCore.NotifyLeft(""..Config.Notification[13].text.."", ""..Config.Notification[15].text.."", "INVENTORY_ITEMS", "consumable_herb_parasol_mushroom", 4000, "COLOR_PURE_WHITE")
     end
 end)
 
