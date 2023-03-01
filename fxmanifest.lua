@@ -5,7 +5,7 @@ lua54 'yes'
 
 author 'Emotion'
 description 'by Emotion'
-version '1.0.2'
+version '1.1.0'
 
 server_scripts {
 	'server/server.lua'
