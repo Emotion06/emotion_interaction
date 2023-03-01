@@ -6,7 +6,7 @@ Config = {}
 
 Config.Pipeitem = "pipe"
 
-Config.MetaData = true -- If you use MetaData
+Config.MetaData = false -- If you use MetaData
 
 Config.Interactions = {
     ["cigpack"] = { 
@@ -16,7 +16,6 @@ Config.Interactions = {
         hightype = "GunslingerFill",
         highduration = 5,
         -- MetaData
-        Broken = "Box is empty!", 
         Durability = "Piece = ",
         Max = 10,
         Lost = 1, 
@@ -29,7 +28,6 @@ Config.Interactions = {
         hightype = "GunslingerFill",
         highduration = 10,
         -- MetaData
-        Broken = "Box is empty!",
         Durability = "Piece = ",
         Max = 6, 
         Lost = 1,
@@ -42,7 +40,6 @@ Config.Interactions = {
         hightype = "GunslingerFill",
         highduration = 10,
         -- MetaData
-        Broken = "Can is empty!",
         Durability = "Piece = ",
         Max = 6, 
         Lost = 1,
@@ -53,8 +50,7 @@ Config.Interactions = {
         high = true, 
         hightype = "GunslingerFill",
         highduration = 10,
-        --MetaData
-        Broken = "Can is empty!",
+        -- MetaData
         Durability = "Piece = ",
         Max = 10, 
         Lost = 1,
@@ -65,8 +61,7 @@ Config.Interactions = {
         high = false, 
         hightype = false,
         highduration = false,
-        --MetaData
-        Broken = "Can is empty!",
+        -- MetaData
         Durability = "Content = ",
         Max = 100, 
         Lost = 10,
@@ -89,7 +84,7 @@ Config.Language = {
     [7] = {text = "Change Stance",},
 
     -- Chewingtobaccopack
-    [8] = {text = "Ausspucken"}, 
+    [8] = {text = "Spit"}, 
     [9] = {text = "Chew",}, 
     [10] = {text = "Change Stance",},
 
@@ -97,17 +92,44 @@ Config.Language = {
     [11] = {text = "Put away",},
     [12] = {text = "Wagging",},
 
-    -- Pipe
-    [13] = {text = "You need a pipe!",},  -- server.lua
-
     -- Parasol
-    [14] = {text = "You use a parasol!",}, -- server.lua
-    [15] = {text = "You can't use it now!",},
-    [16] = {text = "Parsol",},
-    [17] = {text = "Put away",},
+    [13] = {text = "Put away",},
 
     -- Pocket Watch
-    [18] = {text = "Put away",},
+    [14] = {text = "Put away",},
+}
+
+Config.Notification = {
+
+    -- Cigpack
+    [1] = {text = "Cigpack",}, -- Title
+    [2] = {text = "Box is empty!",}, -- Information
+    
+    -- Cigarpack   
+    [3] = {text = "Cigarpack",}, -- Title
+    [4] = {text = "Box is empty!",}, -- Information
+    
+    -- Pipepack
+    [5] = {text = "Pipepack",}, -- Title
+    [6] = {text = "Can is empty!",}, -- Information
+    
+    -- Chewingtobaccopack
+    [7] = {text = "Chewing Tobacco"}, -- Title
+    [8] = {text = "Can is empty!",}, -- Information
+
+    -- Hairpomade
+    [9] = {text = "Hairpomade"}, -- Title
+    [10] = {text = "Can is empty!",}, -- Information
+    
+    -- Pipe
+    [11] = {text = "Pipe",}, -- Title
+    [12] = {text = "You need a pipe!",}, -- Information
+    
+    -- Parasol
+    [13] = {text = "Parsol",}, -- Title
+    [14] = {text = "You use a parasol!",}, -- Information
+    [15] = {text = "You can't use it now!",}, -- Information
+    
 }
 
 -------------------------------------------------------------------------
